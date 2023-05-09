@@ -47,8 +47,7 @@ def app():
     # Set up the user interface
     st.title("GitHub File Search")
     st.write("Enter a file name to search for on GitHub:")
-    filename = st.text_input("File name")
-    if filename:
+    if filename := st.text_input("File name"):
         # Get the repositories with the file
         repo_info = get_repositories_with_file(filename)
 
